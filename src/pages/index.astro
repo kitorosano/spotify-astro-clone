@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import PlaylistItemCard from '@/components/PlaylistItemCard.astro';
 import Greeting from '@/components/Greeting.svelte';
-import { playlists } from '@/lib/data';
+import { playlists, type Playlist } from '@/lib/data';
 ---
 
 <Layout title='Spotify Clone'>
@@ -16,7 +16,7 @@ import { playlists } from '@/lib/data';
       />
 
       <div class='flex flex-wrap mt-6 gap-4'>
-        {playlists.map((playlist) => <PlaylistItemCard playlist={playlist} />)}
+        {playlists.map((playlist: Playlist) => <PlaylistItemCard playlist={playlist} />)}
       </div>
     </div>
 
