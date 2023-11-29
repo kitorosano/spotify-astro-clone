@@ -1,7 +1,6 @@
 {
-  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": "C:/Users/Usuario/Desktop/Workplaces/Astro/spotify-clone",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
       "@/components/*": ["src/components/*"],
@@ -11,8 +10,8 @@
       "@/lib/*": ["src/lib/*"],
       "@/store/*": ["src/store/*"]
     },
-    "outDir": "dist",
     "jsx": "react-jsx",
     "jsxImportSource": "react"
-  }
+  },
+  "extends": "astro/tsconfigs/strict"
 }
