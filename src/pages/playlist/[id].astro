@@ -2,12 +2,12 @@
 import Layout from '../../layouts/Layout.astro';
 
 import PlaylistItemCard from '@/components/PlaylistItemCard.astro';
-import { allPlaylists, songs } from '@/lib/data';
+import { allPlaylists, songs, type Song, type Playlist } from '@/lib/data';
 
 const { id } = Astro.params;
-const playlist = allPlaylists.find((playlist) => playlist.id === id);
+const playlist = allPlaylists.find((playlist: Playlist) => playlist.id === id);
 const playListSongs = songs.filter(
-  (song) => song.albumId === playlist?.albumId
+  (song: Song) => song.albumId === playlist?.albumId
 );
 ---
 
